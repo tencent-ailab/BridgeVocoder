@@ -1,0 +1,37 @@
+cd ../..
+python train.py --dataset_name \
+                --raw_wavfile_path \
+                --train_data_dir  \
+                --val_data_dir  \
+                --batch_size 16 \
+                --sampling_rate 24000 \
+                --n_fft 1024 \
+                --num_mels 100 \
+                --hop_size 256 \
+                --win_size 1024 \
+                --fmax 12000 \
+                --num_frames 256 \
+                --phase_init zero \
+                --num_workers 4 \
+                --spec_factor 0.33 \
+                --spec_abs_exponent 0.5 \
+                --sde bridgegan \
+                --bridge_type gmax \
+                --beta_min 0.01 \
+                --beta_max 20 \
+                --c 0.4 \
+                --k 2.6 \
+                --N 4 \
+                --predictor x0 \
+                --sampling_type sde_first_order \
+                --opt_type AdamW \
+                --lr 0.00008 \
+                --teacher_ckp_path \ 
+                --teacher_inference_N 16 \
+                --loss_type_list score_mse:1.0,multi-mel:0.1 \
+                --distill_loss_type_list distill,inverse,consistency \
+                --gan_weight 20.0 \
+                --mode sin-bridge \
+                --backbone_bridge bac \
+                --max_epochs 3100 \
+                --max_steps 10000
