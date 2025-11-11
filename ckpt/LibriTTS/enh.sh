@@ -1,0 +1,32 @@
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+cd ../..
+python enhancement.py --dataset_name LibriTTS \
+                --raw_wavfile_path /YOURPATH/LJSpeech/LJSpeech-1.1/wavs/ \
+                --train_data_dir ././Datascp/LSJ/ljs_audio_text_train_filelist.txt \
+                --val_data_dir  ././Datascp/LSJ/ljs_audio_text_val_filelist.txt \
+                --batch_size 8 \
+                --sampling_rate 24000 \
+                --n_fft 1024 \
+                --num_mels 100 \
+                --hop_size 256 \
+                --win_size 1024 \
+                --fmax 12000 \
+                --num_frames 256 \
+                --num_workers 12 \
+                --spec_factor 0.33 \
+                --spec_abs_exponent 0.5 \
+                --bridge_type gmax \
+                --beta_min 0.01 \
+                --beta_max 20.0 \
+                --c 0.4 \
+                --k 2.6 \
+                --N 4 \
+                --predictor x0 \
+                --sampling_type sde_first_order \
+                --opt_type AdamW \
+                --lr 0.0005 \
+                --loss_type_list score_mse:1.0,multi-mel:0.1 \
+                --script_dir "$SCRIPT_DIR" \
+
+
