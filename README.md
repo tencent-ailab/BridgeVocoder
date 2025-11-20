@@ -96,7 +96,7 @@ If you find this project useful in your research, please cite:
 }
 ```
 
-Another related paper, "BridgeVoC2: Revitalizing Neural Vocoder from a Restoration Perspective," is in preparation, which proposes a single-step scheme（https://github.com/Andong-Li-speech/BridgeVoC）.
+Another related paper, "BridgeVoC2: Revitalizing Neural Vocoder from a Restoration Perspective," is in preparation, which proposes a single-step scheme ( https://github.com/Andong-Li-speech/BridgeVoC ).
 ```bibtex
 @misc{li2025bridgevocrevitalizingneuralvocoder,
       title={BridgeVoC: Revitalizing Neural Vocoder from a Restoration Perspective}, 
